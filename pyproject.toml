@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "musa-611-fall-2022-week4"
+version = "0.1.0"
+description = ""
+authors = ["Mjumbe Poe <mjumbewu@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^1.5.0"
+ipykernel = "^6.15.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
