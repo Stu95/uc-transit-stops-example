@@ -1,1 +1,25 @@
-#stop-map { height: 180px; }
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.map-container {
+  height: 100vh;
+  flex-grow: 1;
+}
+
+#stop-map { height: 100%; }
+
+.content-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.list-container {
+  flex-grow: 1;
+  max-width: 40%;
+  overflow-y: auto;
+  height: 100%;
+}
