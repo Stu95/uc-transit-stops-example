@@ -1,16 +1,18 @@
 import universitycity from '../data/universitycity.js';
 
 function initializeStopMap() {
-  let stopMap = L.map('stop-map').setView([39.95522712709254, -75.19864425285742], 13);
+  let stopMap = L.map('stop-map', { zoomSnap: 0.25 }).setView([39.95522712709254, -75.19864425285742], 13);
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '© OpenStreetMap',
   }).addTo(stopMap);
 
-  L.geoJSON(universitycity, {
+  const uc = L.geoJSON(universitycity, {
     style: { fill: null, color: '#000' },
   }).addTo(stopMap);
+
+  stopMap.fitBounds(uc.getBounds());
 
   return stopMap;
 }
