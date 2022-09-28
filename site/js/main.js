@@ -5,6 +5,7 @@ let stopMap = initializeStopMap();
 showStopsOnMap(stops, stopMap);
 
 let routeCheckboxes = document.querySelectorAll('.route-checkbox');
+let stopNameInput = document.querySelector('#stop-name-input');
 
 for (const cb of routeCheckboxes) {
   cb.addEventListener('change', (evt) => {
@@ -13,5 +14,16 @@ for (const cb of routeCheckboxes) {
   });
 }
 
+stopNameInput.addEventListener('input', () => {
+  const text = stopNameInput.value;
+  const filteredStops = stops.filter(function (stop) {
+    const name = stop['stop_name'].toLowerCase();
+    const hasText = name.includes(text);
+    return hasText;
+  });
+  showStopsOnMap(filteredStops, stopMap);
+});
+
 window.stops = stops;
+window.stopMap = stopMap;
 window.routeCheckboxes = routeCheckboxes;
