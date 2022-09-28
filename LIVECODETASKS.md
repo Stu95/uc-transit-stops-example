@@ -16,8 +16,10 @@ Check the app in the browser.
 - [X] Use the function to display all the `stops` data on the map.
 - [X] Create a function to show an array of stops on the map. Call the function `showStopsOnMap`
 
-- [ ] Create a list element (unordered -- `ul`) in the HTML give it an id of `stop-list`
+- [ ] Do a list element (unordered -- `ul`) in the HTML give it an id of `stop-list`
 - [ ] Write a function that fills in the list with list item (`li`) elements for each stop in an array
 - [ ] Add a checkbox for each route in University City.
 - [ ] Add a text box to filter stops whose name contains a given string. The text box should have an id of `stop-name-filter`.
 - [ ] Write a predicate function called `shouldShowStop` that will return `true` if a given stop should be shown according to the currently selected filters, and will return `false` if a given stop should not be shown. For now, ignore the filters and always return `true`.
+
+- CustomEvents?
